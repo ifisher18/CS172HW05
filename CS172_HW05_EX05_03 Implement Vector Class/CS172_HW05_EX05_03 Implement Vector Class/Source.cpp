@@ -29,14 +29,27 @@ public:
 	vector <elementType>(size : int, defaultValue : elementType) {
 		
 	}
+	
+	// Appends the element in this vector
 	void push_back(element : elementType) {}
+
+	// Removes the last element from this vector
 	void pop_back() {}
+
+	// Returns the number of the elements in this vector
 	unsigned const size() {}
+
+	// Returns the element at the specified index in this vector
 	elementType const at(index: int) {}
+
+	// Returns true if this vector is empty
 	bool const empty () {}
+
+	// Removes all elements from this vector
 	void clear () {}
-	void swap(v2: vector) {}
+
+	// Swaps the contents of this vector with the specified vector
+	void swap(v2: vector) {
+		
+	}
 };
-int main() {
-	return 0;
-}
