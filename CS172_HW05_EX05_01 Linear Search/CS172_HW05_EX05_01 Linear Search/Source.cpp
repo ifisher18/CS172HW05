@@ -27,14 +27,14 @@ int main ()
     // Arrays of int, double, and string values
     int ArrayInts[] = {1, 2, 3, 4, 5, 6, 7};
     double ArrayDubs[] = {2.5, 6.8, 9.76, 4.22};
-    string ArrayString [] = {'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday'};
+    string ArrayString [] = {"Monday" , "Tuesday" , "Wednesday" , "Thursday"};
     
     // tests the LinearSearch function with ints
     cout << linearSearch(ArrayInts, 5, 7) << endl;
     
     // tests the LinearSearch functin with doubles
-    cout << LinearSearch(ArrayDubs, 6.8, ArrayDubs.size_t) << endl;
+    cout << linearSearch(ArrayDubs, 6.8, 5) << endl;
     
     // tests the LinearSearch function with strings
-    cout << linearSearch(ArrayString, <#T key#>, <#int arraySize#>)
+	cout << linearSearch(ArrayString, string("Wednesday"), 4) << endl;
 }
