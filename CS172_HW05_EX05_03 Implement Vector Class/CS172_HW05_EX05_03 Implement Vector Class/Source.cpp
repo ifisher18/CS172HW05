@@ -5,51 +5,89 @@
 //////////////////////////
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
 // Implement the vector class as an exercise
 // implement only the functions defined in the UML class diagram, as shown in Figure 12.2
-
-class vector<elementType> {
+template <typename T>
+class vector {
 	// data field
+private:
+	T NewArray[];
+	int ArraySize;
+	int ArrayLength;
 
 public:
-	// Constructs an empty vector with the specified element type
-	vector <elementType>() {
-		vector <elementType>;
+	// Constructs an empty vector with the specified element type DONE
+	vector() {
+		ArraySize = 15;
+		ArrayLength = 0;
+		NewArray = new T[ArraySize];
 	}
 
-	// Constructs a vector with the initial size, filled with default values
-	vector <elementType>(size : int) {
-		vector <elementType>[size];
+	// deconstructor that deletes NewArray DONE
+	~vector() {
+		delete[] NewArray;
 	}
 
-	// Constructs a vector with the initial size, filled with specified values
-	vector <elementType>(size : int, defaultValue : elementType) {
-		
+	// Constructs a vector with the initial size, filled with default values DONE
+	vector (int size) {
+		ArraySize = size;
+		ArrayLength = 0;
+		NewArray = new T[size];
+	}
+
+	// Constructs a vector with the initial size, filled with specified values DONE
+	vector (int size, T default) {
+		ArraySize = size;
+		ArrayLength = 0;
+		NewArray = new T[size];
+		for (int i = 0; i > size; i++) {
+			NewArray[i] = default;
+		}
 	}
 	
-	// Appends the element in this vector
-	void push_back(element : elementType) {}
+	// Appends the element in this vector ... finish this
+	void push_back(T size) {
+		if (ArrayLength >= Arraysize) {
+			int* Doublearray = new int[(2 * size)]; // creates a pointer that doubles the size of each memory location
+			for (int i = 0; i < size; i++) // for loop that accesses the array and creates a copy of Doublearray in list
+			{
+				Doublearray[i] = list[i]; // copy of Doublearray in list
+			}
+			delete list; // deletes list since it is old memory space
+		}
+	}
 
-	// Removes the last element from this vector
-	void pop_back() {}
+	// Removes the last element from this vector ?? 
+	void pop_back() {
+		return NewArray[--size];
+	}
 
-	// Returns the number of the elements in this vector
-	unsigned const size() {}
+	// Returns the number of the elements in this vector DONE
+	unsigned const size() {
+		return size;
+	}
 
-	// Returns the element at the specified index in this vector
-	elementType const at(index: int) {}
+	// Returns the element at the specified index in this vector DONE
+	T const at(int index) {
+		return NewArray[index];
+	}
 
-	// Returns true if this vector is empty
-	bool const empty () {}
+	// Returns true if this vector is empty DONE
+	bool const empty () {
+		if (ArrayLength == 0) {
+			return true;
+		}
+	}
 
-	// Removes all elements from this vector
-	void clear () {}
+	// Removes all elements from this vector DONE
+	void clear () {
+		ArrayLength = 0;
+	}
 
 	// Swaps the contents of this vector with the specified vector
 	void swap(v2: vector) {
-		
+		/// ???
 	}
 };
