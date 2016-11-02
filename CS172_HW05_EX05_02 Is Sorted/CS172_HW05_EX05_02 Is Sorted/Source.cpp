@@ -15,14 +15,12 @@ template<typename T>
 // function that checks to see if an array is sorted
 // returns true if sorted
 bool isSorted(const T list[], int size) {
-	for (int i = 0; i < size; i++) {
-		if (list[i] > list[i + 1]) {
-			return true;
-		}
-		else {
+	for (int i = 0; i < (size - 1); i++) {
+		if (! (list[i] < list[i + 1])) {
 			return false;
 		}
 	}
+	return true;
 }
 
 // isSorted test
@@ -53,5 +51,14 @@ int main() {
 
 	// Test with array of strings
 	cout << "String test: {}" << endl;
-	string TestStrings[4] = {'h'}
+	string TestStrings[5] = { "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday" };
+	isSorted(TestStrings, 5);
+	if ((isSorted(TestStrings, 5)) == true) {
+		cout << "Sorted!" << endl;
+	}
+	else {
+		cout << "Not sorted!" << endl;
+	}
+	cout << endl;
+
 }
