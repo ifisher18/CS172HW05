@@ -50,16 +50,16 @@ public:
 	// Appends the element in this vector ... finish this
 	void push_back(T size) {
 		if (ArrayLength >= Arraysize) {
-			int* Doublearray = new int[(2 * size)]; // creates a pointer that doubles the size of each memory location
+			T* NewArray[] = new int[(2 * size)]; // creates a pointer that doubles the size of each memory location
 			for (int i = 0; i < size; i++) // for loop that accesses the array and creates a copy of Doublearray in list
 			{
-				Doublearray[i] = list[i]; // copy of Doublearray in list
+				NewArray[i] = list[i]; // copy of Doublearray in list
 			}
 			delete list; // deletes list since it is old memory space
 		}
 	}
 
-	// Removes the last element from this vector ?? 
+	// Removes the last element from this vector DONE
 	void pop_back() {
 		return NewArray[--size];
 	}
@@ -86,8 +86,10 @@ public:
 		ArrayLength = 0;
 	}
 
-	// Swaps the contents of this vector with the specified vector
-	void swap(v2: vector) {
-		/// ???
+	// Swaps the contents of this vector with the specified vector DONE
+	void swap(T& t1, T& t2) {
+		T tmp(t1); // assigns a temporary location for t1
+		t1 = t2; // duplicates t1 into t2
+		t2 = tmp; // asigns t2 to temp
 	}
 };
