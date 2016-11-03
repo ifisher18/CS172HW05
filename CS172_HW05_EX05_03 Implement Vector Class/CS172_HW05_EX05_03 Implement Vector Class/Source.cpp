@@ -2,7 +2,7 @@
 // Ian Fisher
 // CS 172
 // 10/25/16
-//////////////////////////
+/////////////////////////
 
 #include <iostream>
 using namespace std;
