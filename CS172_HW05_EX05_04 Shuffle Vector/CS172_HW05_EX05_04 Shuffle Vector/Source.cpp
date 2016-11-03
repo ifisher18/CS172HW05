@@ -37,12 +37,22 @@ int main() {
 	// Store the numbers 1, 2, 3, 4....,10
 	for (int i = 0; i < 10; i++)
 		intVector.push_back(i + 1);
+
+	// outputs the contents of the vector before the shuffle function is used
 	cout << "Before the shuffle function, the numbers in the vector are: ";
 	for (int i = 0; i < intVector.size(); i++)
 		cout << intVector[i] << " ";
 	cout << endl;
 	cout << endl;
+
+	// outputs the contents of the vector with 'shuffle' implemented
 	cout << "After implementing the shuffle function, the displayed elements in the vector are now: ";
-	for (int i = 0; i < intVector.size(); i++)
+	for (int i = 0; i < intVector.size(); i++) { // for loop that shuffles intVector before displaying
 		shuffle(intVector);
+	}
+	for (int i = 0; i < intVector.size(); i++) { // for loop that takes the shuffled intVector and outputs it to the user
+		cout << intVector[i] << " ";
+	}
+	cout << endl;
+		
 }

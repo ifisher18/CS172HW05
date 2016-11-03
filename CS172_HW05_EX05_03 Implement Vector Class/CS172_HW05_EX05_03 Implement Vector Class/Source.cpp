@@ -93,3 +93,7 @@ public:
 		t2 = tmp; // asigns t2 to temp
 	}
 };
+
+int main() {
+	return 0;
+}
