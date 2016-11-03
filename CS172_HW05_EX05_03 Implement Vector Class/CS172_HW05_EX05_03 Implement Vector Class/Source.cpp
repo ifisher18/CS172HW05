@@ -13,12 +13,13 @@ template <typename T>
 class vector {
 	// data field
 private:
-	T NewArray[];
+	T NewArray[]; // priv
 	int ArraySize;
 	int ArrayLength;
 
 public:
 	// Constructs an empty vector with the specified element type DONE
+	// default vals
 	vector() {
 		ArraySize = 15;
 		ArrayLength = 0;
@@ -47,7 +48,7 @@ public:
 		}
 	}
 	
-	// Appends the element in this vector ... finish this
+	// Appends the element in this vector ... DONE
 	void push_back(T size) {
 		if (ArrayLength >= Arraysize) {
 			T* NewArray[] = new int[(2 * size)]; // creates a pointer that doubles the size of each memory location
